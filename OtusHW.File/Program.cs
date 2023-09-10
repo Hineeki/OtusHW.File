@@ -21,7 +21,7 @@ namespace OtusHW.File
             {
                 using (FileStream fstream1 = new FileStream($"{path1}\\file{i}.txt", FileMode.OpenOrCreate))
                 {
-                    byte[] buffer = Encoding.UTF8.GetBytes(fstream1.Name + "\t" + DateTime.Now);
+                    byte[] buffer = Encoding.UTF8.GetBytes(fstream1.Name + "\t" + DateTime.Now);//fstream.name нифига не нейм, а путь стрима
                     await fstream1.WriteAsync(buffer, 0, buffer.Length);
                 }
             }
